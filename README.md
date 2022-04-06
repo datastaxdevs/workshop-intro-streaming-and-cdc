@@ -6,10 +6,10 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 
 ## Getting Started
 
-Before you begin the workshop, you'll need a few things installed.
+Before you begin the workshop, you'll need a few things:
 
-- xxxx
-- xxxxx
+- Either the Java Runtime Environment(JRE) or Java Development Kit(JDK) installed
+- Astra account with a saved payment method (it's ok, we won't go past free credits!)
 
 ## Workshop assets
 
@@ -20,8 +20,20 @@ Before you begin the workshop, you'll need a few things installed.
 
 ## Workshop Labs
 
-1. [Lab 1](/lab1/index.md)
-1. [Lab 2](/lab2/index.md)
+1) Creating a Pulsar environment and interacting with the broker ([get started](/lab1/index.md))
+
+    1. Installing binaries
+    1. Pub/Sub
+    1. Adding a function
+    1. Adding a source connector
+    
+2) Implementing the CDC pattern using Astra DB & Astra Streaming ([get started](/lab2/index.md))
+
+     1. Creating the databases
+     1. Creating the tenant
+     1. Enabling CDC
+     1. Enabling the sink connector
+     1. CDC in action
 
 ## Earning the workshop badge
 
