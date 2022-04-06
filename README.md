@@ -20,8 +20,8 @@ Before you begin the workshop, you'll need a few things installed.
 
 ## Workshop Labs
 
-1. [Lab 1](lab1/)
-1. [Lab 2](lab2/)
+1. [Lab 1](/lab1/index.md)
+1. [Lab 2](/lab2/index.md)
 
 ## Earning the workshop badge
 
