@@ -1,0 +1,20 @@
+# https://www.gitpod.io/docs/config-gitpod-file
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  #- name: Build-demo
+  #  init: |
+  #    cd pulsar-demo && mvn clean package install -Dmaven.test.skip=true
+  - name: Open preview
+    command: gp preview https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc/blob/main/lab1/index.md
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: true
+    addLabel: false
