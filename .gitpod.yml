@@ -3,16 +3,16 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Install-Pulsar-Binaries
+  - name: Install-And-Start-Pulsar
     init: |
       curl -O https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-bin.tar.gz
       tar xvfz ./apache-pulsar-2.9.2-bin.tar.gz
-  - name: Start-Pulsar-Broker
-    command: |
-      ./apache-pulsar-2.9.2/bin/pulsar-daemon start standalone
-  - name: Working-Dir
+      ./apache-pulsar-2.9.2/bin/pulsar standalone
+
+  - name: Working-Directory
     command: |
       cd ./apache-pulsar-2.9.2
+      ./bin/pulsar-admin tenants list
 
 ports:
   - port: 8080
@@ -23,6 +23,7 @@ ports:
     onOpen: ignore
   - port: 6650
     onOpen: ignore
+
 github:
   prebuilds:
     master: true
@@ -33,3 +34,7 @@ github:
     addComment: false
     addBadge: true
     addLabel: false
+
+vscode:
+  extensions:
+    - hnw.vscode-auto-open-markdown-preview
