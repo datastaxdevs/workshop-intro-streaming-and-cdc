@@ -6,17 +6,10 @@
 
 In this module we will be augmenting the contents of a message before it is saved to the topic and then we will be routing a message to a new topic, based on its text.
 
-1. Download the demo function artifact and unzip the files
-
-    ```bash
-    curl -O https://github.com/pulsar-neighborhood/exclamation-function/release/1/demo-1.0.tar.gz
-    tar xvfz ./demo-1.0.tar.gz ./function-files/
-    ```
-
 1. Create the function in Pulsar using the function config file
 
     ```bash
-    ./bin/pulsar-admin functions create --function-config-file ./function-files/augment-function.yaml
+    ./bin/pulsar-admin functions create --function-config-file ../resources/augment-function.yaml
     ```
 
 1. Start the function process
@@ -50,7 +43,7 @@ In this module we will be forwarding incoming messages from a general "item-purc
 1. Create the function in Pulsar using the function config file
 
     ```bash
-    ./bin/pulsar-admin functions create --function-config-file ./function-files/filter-function.yaml
+    ./bin/pulsar-admin functions create --function-config-file ../resources/filter-function.yaml
     ```
 
 1. Start the function process

@@ -20,12 +20,9 @@ Before you begin the workshop, you'll need a few things:
 
 ## Workshop Labs and Modules
 
-1) Interacting with the broker ([get started](/lab1/pub-sub.md))
+1) Interacting with the broker
 
-    1. Pub/Sub
-    1. Adding a function
-    1. Adding a source connector
-    1. Adding a sink connector
+    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-project-url>)
     
 2) Implementing the CDC pattern using Astra DB & Astra Streaming ([get started](/lab2/index.md))
 

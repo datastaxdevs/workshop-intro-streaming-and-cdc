@@ -6,12 +6,6 @@
 
 In this module we will use a free account from [Elastic.co](Elastic.co) to create a sink of type Elasticsearch. Then we will publish a message to a topic that the sink is subscribed to and observe the message automatically pushed to Elastic.
 
-1. Download the file connector manifest
-
-    ```bash
-    curl -O https://github.com/pulsar-neighborhood/examples/elasticsearch-sink.yaml 
-    ```
-
 1. Replace the values in the manifest with your Elastic deployment info
 
     ```yaml
@@ -24,8 +18,8 @@ In this module we will use a free account from [Elastic.co](Elastic.co) to creat
 
     ```bash
     ./bin/pulsar-admin sinks create \
-        --archive https://archive.apache.org/dist/pulsar/pulsar-2.9.2/connectors/pulsar-io-elastic-search-2.9.2.nar
-        --sink-config-file ./elasticsearch-sink.yaml
+        --archive ../resources/pulsar-io-elastic-search-2.9.2.nar
+        --sink-config-file ../resources/elasticsearch-sink.yaml
     ```
 
 ## Starting the sink connector and sending messages

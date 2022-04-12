@@ -1,0 +1,13 @@
+name: ElasticSink
+tenant: public
+namespace: default
+inputs:
+  - persistent://public/default/es-sink-topic
+auto-ack: true
+parallelism: 1
+sink-type: elastic-search
+configs:
+  elasticSearchUrl: "<REPLACE>"
+  indexName: "es_sink_index"
+  username: "elastic"
+  password: "<REPLACE>"

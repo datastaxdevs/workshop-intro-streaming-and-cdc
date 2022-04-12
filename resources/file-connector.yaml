@@ -1,0 +1,16 @@
+name: FileSource
+tenant: public
+namespace: default
+destination-topic-name:  persistent://public/default/file-source-topic
+parallelism: 1
+source-type: file
+#producer-config
+configs:
+  inputDirectory: "./"
+  recurse: true
+  keepFile: true
+  fileFilter: "[^\\.].txt"
+  pathFilter: "*"
+  ignoreHiddenFiles: true
+  pollingInterval: 500
+  numWorkers: 1

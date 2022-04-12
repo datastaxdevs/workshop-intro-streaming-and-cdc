@@ -3,17 +3,17 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Install-And-Start-Pulsar
+  - name: Pulsar-Broker
     init: |
-      curl -O https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-bin.tar.gz
-      tar xvfz ./apache-pulsar-2.9.2-bin.tar.gz
+      tar xfz ./resources/apache-pulsar-2.9.2-bin.tar.gz
       ./apache-pulsar-2.9.2/bin/pulsar standalone
 
   - name: Working-Directory
     command: |
+      until [ -d ./apache-pulsar-2.9.2 ]; do sleep 1; done
       cd ./apache-pulsar-2.9.2
       ./bin/pulsar-admin tenants list
-
+      
 ports:
   - port: 8080
     onOpen: ignore
@@ -22,6 +22,8 @@ ports:
   - port: 3181
     onOpen: ignore
   - port: 6650
+    onOpen: ignore
+  - port: 2181
     onOpen: ignore
 
 github:
@@ -37,4 +39,4 @@ github:
 
 vscode:
   extensions:
-    - hnw.vscode-auto-open-markdown-preview
+    - matt-rudge.auto-open-preview-panel
