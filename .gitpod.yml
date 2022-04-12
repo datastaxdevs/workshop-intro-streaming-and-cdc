@@ -3,11 +3,26 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  #- name: Build-demo
-  #  init: |
-  #    cd pulsar-demo && mvn clean package install -Dmaven.test.skip=true
-  - name: Open preview
-    command: gp preview https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc/blob/main/lab1/index.md
+  - name: Install-Pulsar-Binaries
+    init: |
+      curl -O https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-bin.tar.gz
+      tar xvfz ./apache-pulsar-2.9.2-bin.tar.gz
+  - name: Start-Pulsar-Broker
+    command: |
+      ./apache-pulsar-2.9.2/bin/pulsar-daemon start standalone
+  - name: Working-Dir
+    command: |
+      cd ./apache-pulsar-2.9.2
+
+ports:
+  - port: 8080
+    onOpen: ignore
+  - port: 4181
+    onOpen: ignore
+  - port: 3181
+    onOpen: ignore
+  - port: 6650
+    onOpen: ignore
 github:
   prebuilds:
     master: true
