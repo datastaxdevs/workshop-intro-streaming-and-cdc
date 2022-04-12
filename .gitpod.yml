@@ -5,7 +5,8 @@ image:
 tasks:
   - name: Pulsar-Broker
     init: |
-      tar xfz ./resources/apache-pulsar-2.9.2-bin.tar.gz
+      curl -O https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-bin.tar.gz
+      tar xfz ./apache-pulsar-2.9.2-bin.tar.gz
       ./apache-pulsar-2.9.2/bin/pulsar standalone
 
   - name: Working-Directory
