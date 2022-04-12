@@ -22,7 +22,7 @@ Before you begin the workshop, you'll need a few things:
 
 1) Interacting with the broker
 
-    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-project-url>)
+    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
     
 2) Implementing the CDC pattern using Astra DB & Astra Streaming ([get started](/lab2/index.md))
 
