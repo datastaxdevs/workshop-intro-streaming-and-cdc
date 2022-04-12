@@ -13,19 +13,19 @@ Before you begin the workshop, you'll need a few things:
 
 ## Workshop assets
 
-- [Slide deck](slides/Presentation.pdf)
-- [Workshop video](https://www.youtube.com/watch?v=YYYYYYY)
+- [Slide deck](slides/presentation.pdf)
+- [Workshop video](https://www.youtube.com/watch?v=5lPKtPap6co)
 - [Discord chat](https://dtsx.io/discord)
 - [Questions and Answers](https://community.datastax.com/)
 
-## Workshop Labs
+## Workshop Labs and Modules
 
-1) Creating a Pulsar environment and interacting with the broker ([get started](/lab1/index.md))
+1) Interacting with the broker ([get started](/lab1/pub-sub.md))
 
-    1. Installing binaries
     1. Pub/Sub
     1. Adding a function
     1. Adding a source connector
+    1. Adding a sink connector
     
 2) Implementing the CDC pattern using Astra DB & Astra Streaming ([get started](/lab2/index.md))
 
@@ -37,10 +37,6 @@ Before you begin the workshop, you'll need a few things:
 
 ## Earning the workshop badge
 
-### Homework assignment
+To earn the badge for this workshop, you'll need to answer the [homework questions](https://forms.gle/BHGNPQXhdLRWbV7C8). Once submitted, we will evaluate your answers and you will receive an email with the badge certificate.
 
-### Submit for review
-
-To earn the badge for this workshop, you'll need to complete the homework and [submit here](aaaaaaaa).
-
-![Badge](images/badge/xxxxxxxxxx.png)
+![Badge](images/cdc-badge.png)
