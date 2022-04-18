@@ -18,22 +18,12 @@ Before you begin the workshop, you'll need a few things:
 - [Discord chat](https://dtsx.io/discord)
 - [Questions and Answers](https://community.datastax.com/)
 
-## Workshop Labs and Modules
+## Workshop Lab: Interacting with the Pulsar Broker
 
-1) Interacting with the broker
-
-    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
-    
-2) Implementing the CDC pattern using Astra DB & Astra Streaming ([get started](/lab2/index.md))
-
-     1. Creating the databases
-     1. Creating the tenant
-     1. Enabling CDC
-     1. Enabling the sink connector
-     1. CDC in action
+  [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)    
 
 ## Earning the workshop badge
 
 To earn the badge for this workshop, you'll need to answer the [homework questions](https://forms.gle/BHGNPQXhdLRWbV7C8). Once submitted, we will evaluate your answers and you will receive an email with the badge certificate.
 
-![Badge](images/cdc-badge.png)
+<img src="images/cdc-badge.png" data-canonical-src="images/cdc-badge.png" width="200" height="200" />
