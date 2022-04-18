@@ -9,7 +9,7 @@ In this module we will be augmenting the contents of a message before it is save
 1. Create the function in Pulsar using the function config file
 
     ```bash
-    ./bin/pulsar-admin functions create --function-config-file ../resources/augment-function.yaml
+    ./bin/pulsar-admin functions create --function-config-file ../resources/exclamation-function.yaml
     ```
 
 1. Start the function process
@@ -27,13 +27,13 @@ In this module we will be augmenting the contents of a message before it is save
 1. Send 2 messages to the function's input topic
 
     ```bash
-    ./bin/pulsar-client produce -m "Hello there" -n 2 persistent://public/default/function-input-topic
+    ./bin/pulsar-client produce -m "Hello there" -n 2 persistent://public/default/exclamation-input-topic
     ```
 
 1. Consume the 2 messages and observe the additional "!" on each message
 
     ```bash
-    ./bin/pulsar-client consume -p Earliest -t Shared -n 2 -s "my-subscription" persistent://public/default/function-output-topic
+    ./bin/pulsar-client consume -p Earliest -t Shared -n 2 -s "my-subscription" persistent://public/default/exclamation-output-topic
     ```
 
 ## Adding a function that categorizes the message to other topics

@@ -1,0 +1,9 @@
+jar: /workspace/workshop-intro-streaming-and-cdc/resources/pulsar-function-demo-0.1.jar
+className: com.example.ExclamationFunction
+parallelism: 1
+inputs:
+  - persistent://public/default/exclamation-input-topic
+output: persistent://public/default/exclamation-output-topic
+tenant: public
+namespace: default
+name: ExclamationFunction

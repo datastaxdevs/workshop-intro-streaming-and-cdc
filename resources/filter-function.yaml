@@ -1,9 +1,9 @@
-jar: /mnt/c/Users/ddieruf/source/DatastaxDevs/workshop-intro-streaming-and-cdc/java-function/demo/target/demo-1.0-SNAPSHOT.jar
+jar: /workspace/workshop-intro-streaming-and-cdc/resources/pulsar-function-demo-0.1.jar
 className: com.example.FilterFunction
 parallelism: 1
 inputs:
-  - persistent://public/default/filter-input-topic
-output: persistent://public/default/filter-output-topic
+  - persistent://public/default/item-purchases
+#output: persistent://public/default/filter-output-topic
 tenant: public
 namespace: default
 name: FilterFunction

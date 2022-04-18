@@ -1,9 +1,0 @@
-jar: /mnt/c/Users/ddieruf/source/DatastaxDevs/workshop-intro-streaming-and-cdc/java-function/demo/target/demo-1.0-SNAPSHOT.jar
-className: com.example.ExclamationFunction
-parallelism: 1
-inputs:
-  - persistent://public/default/augment-input-topic
-output: persistent://public/default/augment-output-topic
-tenant: public
-namespace: default
-name: ExclamationFunction

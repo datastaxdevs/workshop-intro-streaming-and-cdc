@@ -6,7 +6,7 @@ parallelism: 1
 source-type: file
 #producer-config
 configs:
-  inputDirectory: "./"
+  inputDirectory: "/workspace/workshop-intro-streaming-and-cdc/resources/"
   recurse: true
   keepFile: true
   fileFilter: "[^\\.].txt"
