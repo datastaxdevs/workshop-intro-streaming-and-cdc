@@ -82,11 +82,13 @@ In this module we will be forwarding incoming messages from a general "item-purc
 1. Send a few messages to the function's input topic with different purchase categories
 
     ```bash
-    ./bin/pulsar-client produce -m "{\"PurchaseCategory\":\"Lamp\",\"ItemName\":\"Some desk lamp\"}" -n 1 persistent://public/default/item-purchases
+    ./bin/pulsar-client produce -s ";" -m "{\"PurchaseCategory\":\"Lamp\",\"ItemName\":\"Some desk lamp\"}" -n 1 persistent://public/default/item-purchases
     ```
     ```bash
-    ./bin/pulsar-client produce -m '{"PurchaseCategory":"Desk","ItemName":"A really cool desk"}' -n 1 persistent://public/default/item-purchases
+    ./bin/pulsar-client produce -s ";" -m "{\"PurchaseCategory\":\"Desk\",\"ItemName\":\"A really cool desk\"}" -n 1 persistent://public/default/item-purchases
     ```
+
+    Notice the additional `-s` parameter. The default for the produce command is to parse multiple messages delimited by a comma ','. But we used the comma in well formed json. So the delimiter was switched to be a semi-colon ';'.
 
 1. Consume the "Lamp" category messages
 

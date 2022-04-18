@@ -1,16 +1,13 @@
 name: FileSource
 tenant: public
 namespace: default
-destination-topic-name:  persistent://public/default/file-source-topic
+destinationTopicName:  persistent://public/default/file-source-topic
 parallelism: 1
-source-type: file
+sourceType: file
 #producer-config
 configs:
-  inputDirectory: "/workspace/workshop-intro-streaming-and-cdc/resources/"
-  recurse: true
+  inputDirectory: "/workspace/workshop-intro-streaming-and-cdc/resources"
   keepFile: true
-  fileFilter: "[^\\.].txt"
-  pathFilter: "*"
-  ignoreHiddenFiles: true
-  pollingInterval: 500
+  fileFilter: "my-messages.txt"
+  pollingInterval: 1000
   numWorkers: 1
