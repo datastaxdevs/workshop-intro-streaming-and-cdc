@@ -3,7 +3,7 @@ className: com.example.FilterFunction
 parallelism: 1
 inputs:
   - persistent://public/default/item-purchases
-#output: persistent://public/default/filter-output-topic
 tenant: public
 namespace: default
 name: FilterFunction
+logTopic: persistent://public/default/filter-function-logs

@@ -20,7 +20,15 @@ Before you begin the workshop, you'll need a few things:
 
 ## Workshop Lab: Interacting with the Pulsar Broker
 
-  [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)    
+  1. Get familar with the Pulsar environment
+  1. Pub/Sub
+  1. Augmenting message text
+  1. Filtering messages to other topics
+  1. Adding a source connector
+
+  To get started, first open the lab environment: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
+
+  Once the environment has initialized, open this readme (the lab environment) and [start the lab](./lab1/get-familiar.md)    
 
 ## Earning the workshop badge
 

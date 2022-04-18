@@ -45,7 +45,7 @@ Namespace: `public`
 
 1. Get the rest of the messages from the Broker
 
-    We have only consumed (otherwise known as acknowledged) the first message on the topic. There is till another waiting. Use the following command to retrieve and acknowledged the last 'N' messages.
+    We have only consumed (otherwise known as acknowledged) the first message on the topic. There is still another waiting. Use the following command to retrieve and acknowledged the last 'N' messages.
 
     ```bash
     ./bin/pulsar-client consume -p Earliest -t Shared -n 1 -s "my-subscription" persistent://public/default/my-first-topic

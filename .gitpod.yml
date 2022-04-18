@@ -13,8 +13,6 @@ tasks:
     command: |
       until [ -f ./apache-pulsar-2.9.2/bin/pulsar-admin ]; do sleep 1; done
       cd ./apache-pulsar-2.9.2
-      sleep 5
-      ./bin/pulsar-admin tenants list
       
 ports:
   - port: 8080

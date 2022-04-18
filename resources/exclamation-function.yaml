@@ -7,3 +7,4 @@ output: persistent://public/default/exclamation-output-topic
 tenant: public
 namespace: default
 name: ExclamationFunction
+logTopic: persistent://public/default/exclamation-function-logs
