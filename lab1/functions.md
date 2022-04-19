@@ -1,4 +1,4 @@
-[Home](/README.md)
+[Next Module >>](/lab1/source-connector.md)
 
 ---
 
@@ -128,7 +128,4 @@ If you changed the message to be malformed json (ie: remove the last "`}`") and 
 
 Functions are a very powerful feature of Pulsar. You could use them to make real time decisions with machine learning or you could use them to distribute messages to different teams. The possabilites are endless with functions!
 
-To this point we have been publishing messages manually to topics. Next let's have Pulsar watch a "source" for messages.
-
----
-[Next Module >>](/lab1/source-connector.md)
+To this point we have been publishing messages manually to topics. Next let's have Pulsar watch a "source" for messages. Scroll to the top to navigate to the next module.

@@ -1,4 +1,4 @@
-[Home](/README.md)
+[Next Module >>](/lab1/functions.md)
 
 ---
 
@@ -56,7 +56,4 @@ This example was a very controlled way of producing and consuming messages from 
 
 Another convenient feature is the type of subscription that is created for consuming. It could be "shared" or "exclusive" or others. The value represents if other consumes can share the same subscription's configuration and messages, or if it is exclusive and not open.
 
-Now that we have the basics of producing and consuming messages, let's add a function in the middle!
-
----
-[Next Module >>](/lab1/functions.md)
+Now that we have the basics of producing and consuming messages, let's add a function in the middle! Scroll to the top to navigate to the next module.

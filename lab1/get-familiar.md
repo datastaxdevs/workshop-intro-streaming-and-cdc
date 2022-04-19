@@ -1,4 +1,4 @@
-[Home](/README.md)
+[Next Module >>](/lab1/pub-sub.md)
 
 ---
 
@@ -55,5 +55,4 @@ Lets test out the terminal window and copy/paste...
 
 Tenants, namespaces, and topics are the basics of Pulsar. These things will be represented inm every interaction you have with the Broker. Notice each command used the `bin` folder to execute a binary. This folder is where all binaries are stored. Let's continue to the next module where we will add and consume messages on a topic.
 
----
-[Next Module >>](/lab1/pub-sub.md)
+Scroll to the top to navigate to the next module.
