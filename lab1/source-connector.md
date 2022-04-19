@@ -1,4 +1,4 @@
-[Home](index.md)
+[Home](/README.md)
 
 ---
 
@@ -88,4 +88,4 @@ The premade sources provide a wealth of power "out of the box". You can use sour
 Congratulations! You can complete the basics of Apache Pulsar lab. Now it's time to extned these concepts into a Pulsar client of your own. Create one in Java, C#, Go, Node, or Python.
 
 ---
-[Home](./index.md)
+[Home](/README.md)

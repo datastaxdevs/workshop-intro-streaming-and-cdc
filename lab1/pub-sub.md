@@ -1,4 +1,4 @@
-[Home](index.md)
+[Home](/README.md)
 
 ---
 
@@ -59,4 +59,4 @@ Another convenient feature is the type of subscription that is created for consu
 Now that we have the basics of producing and consuming messages, let's add a function in the middle!
 
 ---
-[Next Module >>](./functions.md)
+[Next Module >>](/lab1/functions.md)

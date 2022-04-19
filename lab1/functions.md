@@ -1,4 +1,4 @@
-[Home](index.md)
+[Home](/README.md)
 
 ---
 
@@ -131,4 +131,4 @@ Functions are a very powerful feature of Pulsar. You could use them to make real
 To this point we have been publishing messages manually to topics. Next let's have Pulsar watch a "source" for messages.
 
 ---
-[Next Module >>](./source-connector.md)
+[Next Module >>](/lab1/source-connector.md)

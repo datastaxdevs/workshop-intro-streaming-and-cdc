@@ -1,4 +1,4 @@
-[Home](index.md)
+[Home](/README.md)
 
 ---
 
@@ -22,6 +22,8 @@ Lets test out the terminal window and copy/paste...
 
     ```logs
     "public"
+    "pulsar"
+    "sample"
     ```
 
     Using the default configurations for Pulsar, a default tenant named "public" is automatically created. A tenant is a logical area dedicated (ie: secured) for a specific use. Think of tenants in terms of a product or line of business (although it could be as granular as you like). We wil be using this tenant name throughout the lab.
@@ -54,4 +56,4 @@ Lets test out the terminal window and copy/paste...
 Tenants, namespaces, and topics are the basics of Pulsar. These things will be represented inm every interaction you have with the Broker. Notice each command used the `bin` folder to execute a binary. This folder is where all binaries are stored. Let's continue to the next module where we will add and consume messages on a topic.
 
 ---
-[Next Module >>](./pub-sub.md)
+[Next Module >>](/lab1/pub-sub.md)

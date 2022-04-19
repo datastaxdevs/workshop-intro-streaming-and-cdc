@@ -26,9 +26,9 @@ Before you begin the workshop, you'll need a few things:
   1. Filtering messages to other topics
   1. Adding a source connector
 
-  To get started, first open the lab environment: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
+  First, open the lab environment: [![Open Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
 
-  Once the environment has initialized, open this readme (the lab environment) and [start the lab](./lab1/get-familiar.md)    
+  Once the environment has initialized, *[start the lab](/lab1/get-familiar.md)*    
 
 ## Earning the workshop badge
 
