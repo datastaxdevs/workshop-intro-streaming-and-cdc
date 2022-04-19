@@ -4,9 +4,11 @@
 
 ## Adding a source connector
 
-In this module we will use the contents of a local file to write messages to a Pulsar topic.
+In this module we will create a "source" that instructs the Pulsar Broker to "watch" a certain file. When new lines of content are added to the file, Pulsar will stream the contents to a topic.
 
-1. Create the connector in Pulsar using the manifest
+1. Create the source connector in Pulsar using the provided manifest
+
+    Similar to functions, notice the "parallelism" value. To accomodate high loads, Pulsar can run the same source in multiple backgound threads. There are many types of build in sources like Debezium, DynamoDB, Kafka, Kinesis, and RabbitMQ. [The documentation](https://pulsar.apache.org/docs/en/io-connectors/) has a list of all supported connectors.
 
     ```bash
     ./bin/pulsar-admin sources create \
@@ -46,7 +48,7 @@ In this module we will use the contents of a local file to write messages to a P
     }
     ```
 
-## Adding and consuming message from the command line
+## Adding and consuming messages from the command line
 
 1. Add 2 messages to the file
 
@@ -61,27 +63,29 @@ In this module we will use the contents of a local file to write messages to a P
     ./bin/pulsar-client consume -p Earliest -t Shared -n 2 -s "file-source" persistent://public/default/file-source-topic
     ```
 
-## Adding and consuming messages from the file and a consumer
+## Adding and consuming messages from the file and a consumer simultaneously
 
 1. Open the file "my-message.txt" from the "resources" directory in the left navigation
 
-1. Start a consumer that runs indefinitly
+1. Start a consumer that runs indefinitly in the terminal
 
     ```bash
     ./bin/pulsar-client consume -p Earliest -t Shared -n 0 -s "file-source" persistent://public/default/file-source-topic
     ```
 
-1. Add text to the file and notice the message consumer prints the content
+1. Add text to the file and notice the consumer prints the content
 
-1. Add a new line to the file and add more text. The consumer prints the content.
-
-    Note you don't need to save the file. It's a continuous stream!
+1. Add a new line to the file and add more text. The consumer prints the content. You don't need to save the file. It's a continuous stream!
 
 1. Close the consumer by clicking in the terminal area and pressing ctrl+c
 
 ## Summary
 
-This was really cool
+The premade sources provide a wealth of power "out of the box". You can use sources to complete the change data capture (CDC) pattern, or you can connect to another messageing system to create a continuous stream.
+
+# The End
+
+Congratulations! You can complete the basics of Apache Pulsar lab. Now it's time to extned these concepts into a Pulsar client of your own. Create one in Java, C#, Go, Node, or Python.
 
 ---
-[Next Module](./sink-connector.md)
+[Home](./index.md)

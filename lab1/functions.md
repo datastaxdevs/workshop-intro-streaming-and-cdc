@@ -4,9 +4,11 @@
 
 ## Adding a function that augments the message
 
-In this module we will be augmenting the contents of a message before it is saved to the topic and then we will be routing a message to a new topic, based on its text.
+In this module we will be augmenting the contents of a message that is saved to a certain topic, and routing the new message to a new topic. The functionw as written in Java. You could also creat it in Go or Python. Refer to "java-function" folder in the left navigation to review how a function is created.
 
-1. Create the function in Pulsar using the function config file
+1. Create the function in Pulsar using the provided function config file
+
+    Looking at the config yaml, notice the "inputs" and "output" values. The same function can "watch" multiple topics. Also notice the value "parallelism". This instructs the Broker to open N number of threads running the function. If the topic had high load, one running function would be a bottleneck. Pulsar can run many instances to disctibute the load and take processing time (ie: latency) to almost zero.
 
     ```bash
     ./bin/pulsar-admin functions create --function-config-file ../resources/exclamation-function.yaml
@@ -46,6 +48,8 @@ In this module we will be augmenting the contents of a message before it is save
 
 1. Send 2 messages to the function's input topic
 
+    As the Broker receives these messages, the function will be run.
+
     ```bash
     ./bin/pulsar-client produce -m "Hello there" -n 2 persistent://public/default/exclamation-input-topic
     ```
@@ -71,9 +75,11 @@ In this module we will be augmenting the contents of a message before it is save
 
 ## Adding a function that categorizes the message to other topics
 
-In this module we will be forwarding incoming messages from a general "item-purchases" topic to topics specific to the item's cataegory.
+In this module we will use a function to parse an incoming message (as JSON) and foward the message to a different topic based on the "PurchaseCategory" value.
 
 1. Create the function in Pulsar using the function config file
+
+    Notice in this config there is not "output" value. That is becuase this function will internally forward the message to a specfic topic. Normally the topic names to forward to would not be hard coded in the function. Instead they would be provided as dynamic configuration parameters when the function is created.
 
     ```bash
     ./bin/pulsar-admin functions create --function-config-file ../resources/filter-function.yaml
@@ -108,21 +114,21 @@ In this module we will be forwarding incoming messages from a general "item-purc
     ./bin/pulsar-admin functions status --name FilterFunction
     ```
 
-1. View the function's logs
+If you changed the message to be malformed json (ie: remove the last "`}`") and then "produced" the message, it would not process successfully. The exception would be available in a few places...
 
-    If you changed the message to be malformed json (ie: remove the last "`}`") and then "produced" the message, it would not process successfully. The exception would be available in a few places...
+- The `latestUserExceptions` property of the function's status
+- The function logs located at `logs/functions/public/default/FilterFunction/FilterFunction-0.log`
+- A logging topic that was specificed in the config yaml
 
-    - The `latestUserExceptions` property of the function's status
-    - The function logs located at `logs/functions/public/default/FilterFunction/FilterFunction-0.log`
-    - An logging topic that was specificed when the log was created
-
-        ```bash
-        ./bin/pulsar-client consume -p Earliest -t Shared -n 1 -s "filter-function-subscription" persistent://public/default/filter-function-logs
-        ```
+    ```bash
+    ./bin/pulsar-client consume -p Earliest -t Shared -n 1 -s "filter-function-subscription" persistent://public/default/filter-function-logs
+    ```
 
 ## Summary
 
-This was really cool
+Functions are a very powerful feature of Pulsar. You could use them to make real time decisions with machine learning or you could use them to distribute messages to different teams. The possabilites are endless with functions!
+
+To this point we have been publishing messages manually to topics. Next let's have Pulsar watch a "source" for messages.
 
 ---
-[Next Module](./source-connector.md)
+[Next Module >>](./source-connector.md)

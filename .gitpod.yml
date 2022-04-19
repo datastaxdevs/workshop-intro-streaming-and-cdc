@@ -12,6 +12,7 @@ tasks:
   - name: Working-Directory
     command: |
       until [ -f ./apache-pulsar-2.9.2/bin/pulsar-admin ]; do sleep 1; done
+      gp open ./README.md
       cd ./apache-pulsar-2.9.2
       
 ports:

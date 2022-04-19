@@ -2,51 +2,34 @@
 
 ---
 
-## Installing binaries and running a Pulsar broker
+## Getting familiar with the Pulsar broker
 
-1. To confirm you have a valid Java runtime open a terminal window and run the following command. To install the Java Runtime Environment (JRE) follow the installation wizard [here](https://adoptopenjdk.net/installation.html). NOTE when choosing your platform, the name should include `x64 jre`.
+Running Apache Pulsar's broker and interacting with it's features include a few different binaries. To run the broker the `pulsar` and `pulsar-daemon` binaries are used. To configure and interact with the broker the `pulsar-admin` binary is used.
 
-    ```bash
-    java --version
-    ```
+This GitPod has preloaded a compatible Java Runtime, downloaded and installed Pulsar's binaries, and started the broker in "standalone" mode. Which means all necessary components are run along-side the broker (ie: bookkeeper, zookeeper, etc).
 
-    The version of java returned should be >= 8 and it should be 64-Bit.
+A new terminal window should be open named "Working-Directory". This is the terminal you will use for this lab. All commands provided in the lab can be copy/paste to this terminal window.
 
-1. Within the terminal create a new directory that we will run the lab from and change into that directory
+Lets test out the terminal window and copy/paste...
 
-    ```bash
-    mkdir working-with-pulsar
-    cd working-with-pulsar
-    ```
-
-1. Download the Pulsar binaries artifact into the new directory, expand the artifact, and change into that directory
-
-    > Note this download is ~325mb, please be patient
+1. List preloaded tenants
 
     ```bash
-    curl -O https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-bin.tar.gz
-    tar xvfz ./apache-pulsar-2.9.2-bin.tar.gz
-    cd ./apache-pulsar-2.9.2
+    ./bin/pulsar-admin tenants list
     ```
 
-1. Start a Pulsar broker in a background thread
+    Output:
+
+    ```logs
+    "public"
+    ```
+
+    Using the default configurations for Pulsar, a default tenant named "public" is automatically created. A tenant is a logical area dedicated (ie: secured) for a specific use. Think of tenants in terms of a product or line of business (although it could be as granular as you like). We wil be using this tenant name throughout the lab.
+
+1. List preloaded namespaces within the public tenant
 
     ```bash
-    ./bin/pulsar-daemon start standalone
-    ```
-
-    As the broker starts you will see a similar output to:
-
-    ```log
-    doing start standalone ...
-    starting standalone, logging to /xxxx/logs/pulsar-standalone-xxxxx.log
-    Note: Set immediateFlush to true in conf/log4j2.yaml will guarantee the logging event is flushing to disk immediately. The default behavior is switched off due to performance considerations.
-    ```
-
-1. Confirm your connection with the Broker
-
-    ```bash
-    ./bin/pulsar-admin namespaces list public
+    ./bin/pulsar-admin namespaces list "public"
     ```
 
     Output:
@@ -56,9 +39,19 @@
     "public/functions"
     ```
 
+    Within the "public" tenant 2 namespaces were also automatically created named "default" and "functions". Think if namespaces within a tenant as a logical area for a specifc environment. They could be "development", "test", "production" or they could be "datacenter-1", "datacenter-2". It's up to you to decide what these logical seperations represent. We will be using the "default" namespace throughout the lab.
+
+1. List topics within the public/default namespace
+
+    ```bash
+    ./bin/pulsar-admin topics list "public/default"
+    ```
+
+    The result of this query should be blank. There are no topics loaded in the public/default namespace. A topic is where messages are held. Decisions like if the messages should be persisted or non-persisted, the message retention time, and other configurations are provided when creating the topic.
+
 ## Summary
 
-This was really cool
+Tenants, namespaces, and topics are the basics of Pulsar. These things will be represented inm every interaction you have with the Broker. Notice each command used the `bin` folder to execute a binary. This folder is where all binaries are stored. Let's continue to the next module where we will add and consume messages on a topic.
 
 ---
-[Next Module](./pub-sub.md)
+[Next Module >>](./pub-sub.md)
