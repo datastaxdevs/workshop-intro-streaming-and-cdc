@@ -1,6 +1,6 @@
 # 🔥🔥 Introduction to Event Stream Processing and Change Data Capture (CDC) 🔥🔥
 
-Welcome to the 'Introduction to Event Stream Processing and Change Data Capture (CDC)' workshop. In this two-hour workshop, the Developer Advocate team of DataStax shows the most important fundamentals and basics of XXXXXX.
+Welcome to the 'Introduction to Event Stream Processing and Change Data Capture (CDC)' workshop. In this two-hour workshop, the Developer Advocate team of DataStax shows the most important fundamentals and basics of Pulsar and Change Data Capture (CDC).
 
 It doesn't matter if you join our workshop live or you prefer to do at your own pace, we have you covered. In this repository, you'll find everything you need for this workshop.
 
