@@ -23,9 +23,13 @@ The workshop lab has no pre-req's, it's all within GitPod. The homework does req
   1. Filtering messages to other topics
   1. Adding a source connector
 
-  First, open the lab environment: [![Open Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
+  First, open the lab environment:
 
-  Once the environment has initialized, *[start the lab](/lab1/get-familiar.md)*    
+[![Open Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc)
+
+
+Once the environment has initialized, *[start the lab](/lab1/get-familiar.md)*
+
 
 ## Earning the workshop badge
 
