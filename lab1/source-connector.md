@@ -73,9 +73,7 @@ In this module we will create a "source" that instructs the Pulsar Broker to "wa
     ./bin/pulsar-client consume -p Earliest -t Shared -n 0 -s "file-source" persistent://public/default/file-source-topic
     ```
 
-1. Add text to the file and notice the consumer prints the content
-
-1. Add a new line to the file and add more text. The consumer prints the content. You don't need to save the file. It's a continuous stream!
+1. Add text to the file and notice the consumer prints the content every 1 second. Try clearing that line and adding different text.
 
 1. Close the consumer by clicking in the terminal area and pressing ctrl+c
 
