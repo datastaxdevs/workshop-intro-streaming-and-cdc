@@ -120,8 +120,10 @@ If you changed the message to be malformed json (ie: remove the last "`}`") and 
 - The function logs located at `logs/functions/public/default/FilterFunction/FilterFunction-0.log`
 - A logging topic that was specificed in the config yaml
 
+    This command will watch indefinitly for log events. To exit from the watch press ctrl+c.
+    
     ```bash
-    ./bin/pulsar-client consume -p Earliest -t Shared -n 1 -s "filter-function-subscription" persistent://public/default/filter-function-logs
+    ./bin/pulsar-client consume -p Earliest -t Shared -n 0 -s "filter-function-subscription" persistent://public/default/filter-function-logs
     ```
 
 ## Summary
