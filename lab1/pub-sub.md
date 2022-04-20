@@ -14,7 +14,7 @@ We are going to send a message to the Broker and consume that message from the b
     ./bin/pulsar-client produce -m "Hello there" -n 2 persistent://public/default/my-first-topic
     ```
 
-    There will be quite a bit of feedback on the screen becuase verbose logging is turned on. Upon a successful publish, the last line should be…
+    There will be quite a bit of feedback on the screen because verbose logging is turned on. Upon a successful publish, the last line should be…
 
     ```log
     
@@ -33,7 +33,7 @@ We are going to send a message to the Broker and consume that message from the b
     There will be quite a bit of feedback output to the screen. Look for the line `----- got message -----` and the text below that should contain...
 
     ```log
-    key:[null], properties:[], content:Hello world
+    key:[null], properties:[], content:Hello there
 
     ...
 

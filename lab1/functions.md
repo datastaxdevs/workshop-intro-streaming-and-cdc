@@ -8,7 +8,7 @@ In this module we will be augmenting the contents of a message that is saved to 
 
 1. Create the function in Pulsar using the provided function config file
 
-    Looking at the config yaml, notice the "inputs" and "output" values. The same function can "watch" multiple topics. Also notice the value "parallelism". This instructs the Broker to open N number of threads running the function. If the topic had high load, one running function would be a bottleneck. Pulsar can run many instances to disctibute the load and take processing time (ie: latency) to almost zero.
+    Looking at the config yaml, notice the "inputs" and "output" values. The same function can "watch" multiple topics. Also notice the value "parallelism". This instructs the Broker to open N number of threads running the function. If the topic had high load, one running function would be a bottleneck. Pulsar can run many instances to distribute the load and take processing time (ie: latency) to almost zero.
 
     ```bash
     ./bin/pulsar-admin functions create --function-config-file ../resources/exclamation-function.yaml
@@ -79,7 +79,7 @@ In this module we will use a function to parse an incoming message (as JSON) and
 
 1. Create the function in Pulsar using the function config file
 
-    Notice in this config there is not "output" value. That is becuase this function will internally forward the message to a specfic topic. Normally the topic names to forward to would not be hard coded in the function. Instead they would be provided as dynamic configuration parameters when the function is created.
+    Notice in this config there is not "output" value. That is because this function will internally forward the message to a specfic topic. Normally the topic names to forward to would not be hard coded in the function. Instead they would be provided as dynamic configuration parameters when the function is created.
 
     ```bash
     ./bin/pulsar-admin functions create --function-config-file ../resources/filter-function.yaml
@@ -94,7 +94,7 @@ In this module we will use a function to parse an incoming message (as JSON) and
     ./bin/pulsar-client produce -s ";" -m "{\"PurchaseCategory\":\"Desk\",\"ItemName\":\"A really cool desk\"}" -n 1 persistent://public/default/item-purchases
     ```
 
-    Notice the additional `-s` parameter. The default for the produce command is to parse multiple messages delimited by a comma ','. But we used the comma in well formed json. So the delimiter was switched to be a semi-colon ';'.
+    Notice the additional `-s` parameter. The default for the produce command is to parse multiple messages delimited by a comma `","`. But we used the comma in well formed json. So the delimiter was switched to be a semi-colon `";"`.
 
 1. Consume the "Lamp" category messages
 
@@ -128,6 +128,6 @@ If you changed the message to be malformed json (ie: remove the last "`}`") and 
 
 ## Summary
 
-Functions are a very powerful feature of Pulsar. You could use them to make real time decisions with machine learning or you could use them to distribute messages to different teams. The possabilites are endless with functions!
+Functions are a very powerful feature of Pulsar. You could use them to make real time decisions with machine learning or you could use them to distribute messages to different teams. The possibilites are endless with functions!
 
 To this point we have been publishing messages manually to topics. Next let's have Pulsar watch a "source" for messages. Scroll to the top to navigate to the next module.

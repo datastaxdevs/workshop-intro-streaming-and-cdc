@@ -4,11 +4,11 @@
 
 ## Getting familiar with the Pulsar broker
 
-Running Apache Pulsar's broker and interacting with it's features include a few different binaries. To run the broker the `pulsar` and `pulsar-daemon` binaries are used. To configure and interact with the broker the `pulsar-admin` binary is used.
+Running Apache Pulsar's broker and interacting with its features include a few different binaries. To run the broker the `pulsar` and `pulsar-daemon` binaries are used. To configure and interact with the broker the `pulsar-admin` binary is used.
 
-This GitPod has preloaded a compatible Java Runtime, downloaded and installed Pulsar's binaries, and started the broker in "standalone" mode. Which means all necessary components are run along-side the broker (ie: bookkeeper, zookeeper, etc).
+This GitPod has preloaded a compatible Java Runtime, downloaded and installed Pulsar's binaries, and started the broker in "standalone" mode. Which means all necessary components are run alongside the broker (ie: bookkeeper, zookeeper, etc).
 
-A new terminal window should be open named "Working-Directory". This is the terminal you will use for this lab. All commands provided in the lab can be copy/paste to this terminal window.
+A new terminal window should be open named "Working-Directory". This is the terminal you will use for this lab. All commands provided in the lab can be copy/pasted to this terminal window.
 
 Lets test out the terminal window and copy/paste...
 
@@ -26,7 +26,7 @@ Lets test out the terminal window and copy/paste...
     "sample"
     ```
 
-    Using the default configurations for Pulsar, a default tenant named "public" is automatically created. A tenant is a logical area dedicated (ie: secured) for a specific use. Think of tenants in terms of a product or line of business (although it could be as granular as you like). We wil be using this tenant name throughout the lab.
+    Using the default configurations for Pulsar, a default tenant named "public" is automatically created. A tenant is a logical area dedicated (ie: secured) for a specific use. Think of tenants in terms of a product or line of business (although it could be as granular as you like). We will be using this tenant name throughout the lab.
 
 1. List preloaded namespaces within the public tenant
 
@@ -41,7 +41,7 @@ Lets test out the terminal window and copy/paste...
     "public/functions"
     ```
 
-    Within the "public" tenant 2 namespaces were also automatically created named "default" and "functions". Think if namespaces within a tenant as a logical area for a specifc environment. They could be "development", "test", "production" or they could be "datacenter-1", "datacenter-2". It's up to you to decide what these logical seperations represent. We will be using the "default" namespace throughout the lab.
+    Within the "public" tenant 2 namespaces were also automatically created named "default" and "functions". Think of namespaces within a tenant as a logical area for a specifc environment. They could be "development", "test", "production" or they could be "datacenter-1", "datacenter-2". It's up to you to decide what these logical separations represent. We will be using the "default" namespace throughout the lab.
 
 1. List topics within the public/default namespace
 
@@ -53,6 +53,6 @@ Lets test out the terminal window and copy/paste...
 
 ## Summary
 
-Tenants, namespaces, and topics are the basics of Pulsar. These things will be represented inm every interaction you have with the Broker. Notice each command used the `bin` folder to execute a binary. This folder is where all binaries are stored. Let's continue to the next module where we will add and consume messages on a topic.
+Tenants, namespaces, and topics are the basics of Pulsar. These things will be represented in every interaction you have with the Broker. Notice each command used the `bin` folder to execute a binary. This folder is where all binaries are stored. Let's continue to the next module where we will add and consume messages on a topic.
 
 Scroll to the top to navigate to the next module.
