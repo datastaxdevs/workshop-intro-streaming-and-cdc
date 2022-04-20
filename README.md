@@ -1,15 +1,12 @@
 # 🔥🔥 Introduction to Event Stream Processing and Change Data Capture (CDC) 🔥🔥
 
-Welcome to the 'Introduction to Event Stream Processing and Change Data Capture (CDC)' workshop. In this two-hour workshop, the Developer Advocate team of DataStax shows the most important fundamentals and basics of Pulsar and Change Data Capture (CDC).
+Welcome to the 'Introduction to Event Stream Processing and Change Data Capture (CDC)' workshop. In this two-hour workshop, the Developer Advocate team of DataStax shows the most important fundamentals and basics of [Apache Pulsar](https://pulsar.apache.org) and the Change Data Capture (CDC) pattern.
 
 It doesn't matter if you join our workshop live or you prefer to do at your own pace, we have you covered. In this repository, you'll find everything you need for this workshop.
 
 ## Getting Started
 
-Before you begin the workshop, you'll need a few things:
-
-- Either the Java Runtime Environment(JRE) or Java Development Kit(JDK) installed
-- Astra account with a saved payment method (it's ok, we won't go past free credits!)
+The workshop lab has no pre-req's, it's all within GitPod. The homework does require a Astra account with special access to GCP cloud zones. Refer to the workshop badge area below for more detail.
 
 ## Workshop assets
 
