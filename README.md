@@ -33,6 +33,6 @@ Once the environment has initialized, *[start the lab](/lab1/get-familiar.md)*
 
 ## Earning the workshop badge
 
-To earn the badge for this workshop, you'll need to answer the [homework questions](https://forms.gle/BHGNPQXhdLRWbV7C8). Once submitted, we will evaluate your answers and you will receive an email with the badge certificate.
+To earn the badge for this workshop, you'll need to answer the [homework questions](https://forms.gle/BHGNPQXhdLRWbV7C8). All the instructions for homework are in the form. Once submitted, we will evaluate your answers and you will receive an email with the badge certificate.
 
 <img src="images/cdc-badge.png" data-canonical-src="images/cdc-badge.png" width="200" height="200" />
