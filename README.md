@@ -10,7 +10,7 @@ The workshop lab has no pre-req's, it's all within GitPod. The homework does req
 
 ## Workshop assets
 
-- [Slide deck](slides/presentation.pdf)
+- [Slide deck](/Workshop-Slides.pdf)
 - [Workshop video](https://www.youtube.com/watch?v=5lPKtPap6co)
 - [Discord chat](https://dtsx.io/discord)
 - [Questions and Answers](https://community.datastax.com/)
