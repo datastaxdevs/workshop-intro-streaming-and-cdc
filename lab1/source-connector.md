@@ -83,6 +83,6 @@ The premade sources provide a wealth of power "out of the box". You can use sour
 
 # The End
 
-Congratulations! You can complete the basics of Apache Pulsar lab. Now it's time to extned these concepts into a Pulsar client of your own. Create one in Java, C#, Go, Node, or Python.
+Congratulations! You can complete the basics of Apache Pulsar lab. Now it's time to extend these concepts into a Pulsar client of your own. Create one in Java, C#, Go, Node, or Python.
 
 Please let the session host know you have finished the lab. We will be continuing with slides in a bit.
