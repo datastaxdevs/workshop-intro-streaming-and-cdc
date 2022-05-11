@@ -37,7 +37,3 @@ github:
     addComment: false
     addBadge: true
     addLabel: false
-
-vscode:
-  extensions:
-    - matt-rudge.auto-open-preview-panel
